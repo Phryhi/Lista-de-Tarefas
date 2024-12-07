@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Lista de tarefas</title>
+</head>
+<body>
+    <div class="tudo">
+        <heading>
+            <h1>Lista de Tarefas</h1>
+        </heading>
+        <div class="search">
+            <form action="#" method="post">
+                <input type="text" name="busca" placeholder="Nova tarefa" id="search-box-input">
+                <button type="submit" id="searching"><i><img src="mais.png" alt="add"></i></button>
+            </form>
+        </div>
+        <div id="tarefas"></div>
+    </div>
+    <script>
+        let BotaoAdd = document.getElementById('searching');
+        let Input = document.getElementById('search-box-input');
+        let Tarefas = document.getElementById('tarefas');
+        let marcado = false;
+        
+        BotaoAdd.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (Input.value != ''){
+                var tarefa = document.createElement('p');
+                Tarefas.appendChild(tarefa);
+                tarefa.innerText = '- ' + Input.value;
+                Input.value = '';
+                tarefa.addEventListener('click', function() {
+                    if (marcado == false){
+                        tarefa.style.textDecoration = 'Line-through';
+                        marcado = true;
+                    }
+                    else{
+                        tarefa.style.textDecoration = '';
+                        marcado = false;
+                    }
+                })
+                tarefa.addEventListener('dblclick', function() {
+                    Tarefas.removeChild(tarefa);
+                })
+            }
+        })
+    </script>
+</body>
+</html>

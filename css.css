@@ -1,0 +1,70 @@
+body{
+    margin:0;
+    color:white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:500px;
+    width:700px;
+}
+.tudo{
+    width:100%;
+    background-color: rgb(129, 49, 221);
+    height:100%;
+    display:flexbox;
+    align-items: center;
+    justify-content: center;
+    margin-left:55%;
+    margin-top:10%;
+    border-radius: 10px;
+}
+.tudo h1{
+    margin-left: 30%;
+    margin-top: 4%;
+    font-size: 40px;
+}
+.search{
+    margin-left: 30%;
+}
+.search input{
+    height:40px;
+    width:250px;
+    border-radius: 15px;
+    border:none;
+}
+.search input:hover{
+    background-color: #eaeaea;
+}
+#searching img{
+    height:40px;
+    width:40px;
+    border-radius: 35px;
+}
+#searching img:hover{
+    transform: rotate(180deg);
+    transition:1s;
+}
+.search button{
+    margin:0;
+    height:40px;
+    width:40px;
+    float: right;
+    padding: 1px 1px;
+    margin-top: 6px 8px;
+    margin-right: 190px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+}
+#search-box-input{
+    font-size: 16px;
+    padding-left:3px;
+    color: rgb(0, 0, 0);
+}
+#tarefas{
+    padding-left:20px;
+    font-size: 22px;
+    cursor: pointer;
+    justify-content: space-between;
+    align-items: flex-start;
+}
